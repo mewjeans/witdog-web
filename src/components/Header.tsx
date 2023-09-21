@@ -1,73 +1,37 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-scroll'; 
+// import { Link } from 'react-scroll'; 
+// import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Paths } from '../constants/path';
+import Link from 'next/link';
 import styled from 'styled-components';
 import Image from 'next/image';
+import witdogLogoWhite from '../../public/assets/witdog-logo-white.png';
 import witdogLogo from '../../public/assets/witdog-logo.png';
 import { Fonts } from '@/styles';
-import { HomePage } from './pages/home';
 
 const Header: React.FC = () => {
-  const servicesRef = useRef<HTMLDivElement>(null);
-  const companyRef = useRef<HTMLDivElement>(null);
-  const demoRef = useRef<HTMLDivElement>(null);
-  const downloadRef = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
-    if (ref && ref.current) {
-      // ref가 유효하고 해당 요소가 존재하는 경우 스크롤 실행
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <HeaderLayout>
         <HeaderContainer>
           <div>
-            <Image src={witdogLogo} alt='witdog-logo' />
+            <Link href='/'>
+              <Image src={witdogLogoWhite} alt='witdog-logo-white' />
+            </Link>
           </div>
+
           <div>
-            <Link
-              to='services'
-              spy={true}
-              smooth={true}
-              offset={-70} // 페이지 상단에서 얼마나 떨어져 있는지 조절할 수 있습니다.
-              duration={500}
-              onClick={() => scrollToSection(servicesRef)}
-              name="services"
-            >
+          <Link href='/intro'>
               서비스 소개
             </Link>
-            <Link
-              to='company'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => scrollToSection(companyRef)}
-              name="company"
-            >
+            <Link href='/company'>
               회사 소개
             </Link>
-            <Link
-              to='demo'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => scrollToSection(demoRef)}
-              name="demo"
-            >
+            <Link href='/demo'>
               데모 영상
             </Link>
-            <Link
-              to='download'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => scrollToSection(downloadRef)}
-              name="download"
-            >
+            <Link href='/download'>
               앱 다운로드
             </Link>
           </div>
@@ -80,29 +44,45 @@ export default Header;
 
 
 const HeaderLayout = styled.header`
-background-color: #202020;
+background-color: #000000;
 color: white;
-height: 10rem;
+height: 11rem;
 display: flex;
 flex-direction: row;
+position: fixed;
+top: 0;
+  /* width: 100% */
+  left: 0;
+right: 0;
 `
 
 const HeaderContainer = styled.header`
-background-color: #202020;
+background-color: #000000;
 color: white;
-gap: 35rem;
+gap: 36rem;
 display: flex;
 
-> div:first-child
+
+> div:first-child {
+  width: 24rem;
+  position: relative;
+   > a {
+      
     > img {
-    margin: 3rem;
+    margin: 4rem;
+    width: 16rem;
+    height: auto;
+    position: absolute;
+   }
+}
+  
 }
 
 > div:last-child {
   display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
     justify-content: flex-end;
 
     > a {

@@ -40,26 +40,26 @@ export const HomePage = () => {
 
 
 const Section = styled.div`
-  padding: 20px;
+  /* padding: 20px; */
   /* 각 섹션에 대한 고유한 스타일을 여기에 추가하세요 */
 `;
 
 const ServicesSection = styled(Section)`
-  background-color: #405583;
-  height: 70rem;
+  background-color: #141820;
+  height: 116rem;
 `;
 
 const CompanySection = styled(Section)`
-  background-color: #3498db;
-  height: 70rem;
+  background-color: #6d6e6e;
+  height: 116rem;
 `;
 
 const DemoSection = styled(Section)`
-  background-color: #27ae60;
-  height: 70rem;
+  background-color: #425e4d;
+  height: 116rem;
 `;
 
 const DownloadSection = styled(Section)`
-  background-color: #e74c3c;
-  height: 70rem;
+  background-color: #806f6f;
+  height: 116rem;
 `;
