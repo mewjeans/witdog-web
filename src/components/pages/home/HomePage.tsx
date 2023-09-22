@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { Element } from 'react-scroll';
 import styled from 'styled-components';
 import Header from '@/components/Header';
+import Gnb from '@/components/Gnb';
 
 export const HomePage = () => {
   const servicesRef = useRef(null);
@@ -10,15 +11,15 @@ export const HomePage = () => {
   const demoRef = useRef(null);
   const downloadRef = useRef(null);
 
-  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
-    if (ref && ref.current) {
-      // ref가 유효하고 해당 요소가 존재하는 경우 스크롤 실행
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
+    
     <div>
+           <Gnb
+        servicesRef={servicesRef}
+        companyRef={companyRef}
+        demoRef={demoRef}
+        downloadRef={downloadRef}
+      />
      <ServicesSection ref={servicesRef}>
   <p>안녕</p>
 </ServicesSection>
