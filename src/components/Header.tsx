@@ -1,6 +1,4 @@
 import React, { useRef } from 'react';
-// import { Link } from 'react-scroll'; 
-// import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { Paths } from '../constants/path';
 import Link from 'next/link';
 import styled from 'styled-components';
