@@ -4,6 +4,10 @@ import { Element } from 'react-scroll';
 import styled from 'styled-components';
 import Header from '@/components/Header';
 import Gnb from '../../Gnb';
+import ServiceSection from '../../sections/ServiceSection';
+import CompanyIntroSection from '../../sections/CompanySection';
+// import DownloadSection from '../../sections/DownloadSection';
+// import DemoSection from '../../sections/DemoSection';
 
 export const HomePage = () => {
   const servicesRef = useRef(null);
@@ -21,22 +25,11 @@ export const HomePage = () => {
         downloadRef={downloadRef}
       />
 
-    
-    <ServicesSection ref={servicesRef}>
-      <p>안녕</p>
-    </ServicesSection>
+      <ServiceSection servicesRef={servicesRef} />
+      <CompanyIntroSection companyRef={companyRef} />
+      {/* // <DemoSection demoRef={demoRef} />
+      // <DownloadSection downloadRef={downloadRef} /> */} 
 
-    <CompanySection ref={companyRef}>
-      <p>회사 소개</p>
-    </CompanySection>
-
-    <DemoSection ref={demoRef}>
-      <p>데모 영상</p>
-    </DemoSection>
-
-    <DownloadSection ref={downloadRef}>
-      <p>앱 다운로드</p>
-    </DownloadSection>
     </div>
   );
 };
