@@ -33,6 +33,46 @@ $ npm run dev
 ###  3. 디렉토리 구조 
 ---
 ```
+📦  WITDOG
+├─ node_modules
+├─ public
+│  └─ assets
+├─ src
+│  ├─ components
+│  │  ├─ layout
+│  │  │  └─ DefaultLayout.tsx
+│  │  ├─ pages
+│  │  │  ├─ company
+│  │  │  │  └─ CompanyPage.tsx
+│  │  │  ├─ demo
+│  │  │  │  └─ DemoPage.tsx
+│  │  │  ├─ download
+│  │  │  │  └─ DownloadPage.tsx
+│  │  │  ├─ home
+│  │  │  │  └─ HomePage.tsx
+│  │  │  ├─ intro
+│  │  │  │  └─ IntroPage.tsx
+│  │  └─ seo
+│  │     ├─ CostomHead.tsx
+│  │     └─ index.ts
+│  ├─ constants
+│  │     ├─ index.ts
+│  │     ├─ seo.ts
+│  │     ├─ urls.ts
+│  │     └─ path.js
+│  ├─ pages
+│  ├─ styles
+│  └─ utils
+├─ .babelrc
+├─ .env.example
+├─ .eslintrc.json
+├─ .gitignore
+├─ .prettierrc.json
+├─ .next.config.js
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+└─ README.md
 ```
 
 ### 4. 협업 방법
