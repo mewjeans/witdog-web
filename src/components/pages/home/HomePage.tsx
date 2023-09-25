@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { Element } from 'react-scroll';
 import styled from 'styled-components';
 import Header from '@/components/Header';
-import Gnb from '@/components/Gnb';
+import Gnb from '../../Gnb';
 
 export const HomePage = () => {
   const servicesRef = useRef(null);
@@ -14,27 +14,29 @@ export const HomePage = () => {
   return (
     
     <div>
-           <Gnb
+      <Gnb
         servicesRef={servicesRef}
         companyRef={companyRef}
         demoRef={demoRef}
         downloadRef={downloadRef}
       />
-     <ServicesSection ref={servicesRef}>
-  <p>안녕</p>
-</ServicesSection>
 
-<CompanySection ref={companyRef}>
-  <p>회사 소개</p>
-</CompanySection>
+    
+    <ServicesSection ref={servicesRef}>
+      <p>안녕</p>
+    </ServicesSection>
 
-<DemoSection ref={demoRef}>
-  <p>데모 영상</p>
-</DemoSection>
+    <CompanySection ref={companyRef}>
+      <p>회사 소개</p>
+    </CompanySection>
 
-<DownloadSection ref={downloadRef}>
-  <p>앱 다운로드</p>
-</DownloadSection>
+    <DemoSection ref={demoRef}>
+      <p>데모 영상</p>
+    </DemoSection>
+
+    <DownloadSection ref={downloadRef}>
+      <p>앱 다운로드</p>
+    </DownloadSection>
     </div>
   );
 };
@@ -42,7 +44,7 @@ export const HomePage = () => {
 
 const Section = styled.div`
   /* padding: 20px; */
-  /* 각 섹션에 대한 고유한 스타일을 여기에 추가하세요 */
+ 
 `;
 
 const ServicesSection = styled(Section)`
