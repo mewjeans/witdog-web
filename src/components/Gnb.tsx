@@ -2,11 +2,6 @@ import React, { useRef } from 'react';
 import { Paths } from '../constants/path';
 import Link from 'next/link';
 import styled from 'styled-components';
-import Image from 'next/image';
-import witdogLogoWhite from '../../public/assets/witdog-logo-white.png';
-import witdogLogo from '../../public/assets/witdog-logo.png';
-import { Fonts } from '@/styles';
-import Header from '@/components/Header';
 
 interface GnbProps {
     servicesRef: React.RefObject<HTMLElement>; // Ref 타입으로 변경
@@ -29,27 +24,31 @@ interface GnbProps {
 
     return (
         <GnbLayout>
-           <ul>
-        <li onClick={() => scrollToSection(servicesRef)}>
-          <a href="javascript:;" style={{ color: 'rgb(104, 104, 104)' }}>
+        <ul>
+          <li>
+          <button onClick={() => scrollToSection(servicesRef)} style={{ color: 'rgb(255, 255, 255)' }}>
             서비스 소개
-          </a>
-        </li>
-        <li onClick={() => scrollToSection(companyRef)}>
-          <a href="javascript:;" style={{ color: 'rgb(104, 104, 104)' }}>
+          </button>
+          </li>
+
+          <li>
+          <button onClick={() => scrollToSection(companyRef)} style={{ color: 'rgb(241, 238, 238)' }}>
             회사 소개
-          </a>
-        </li>
-        <li onClick={() => scrollToSection(demoRef)}>
-          <a href="javascript:;" style={{ color: 'rgb(104, 104, 104)' }}>
+          </button>
+          </li>
+
+          <li>
+          <button onClick={() => scrollToSection(demoRef)} style={{ color: 'rgb(236, 232, 232)' }}>
             데모
-          </a>
-        </li>
-        <li onClick={() => scrollToSection(downloadRef)}>
-          <a href="javascript:;" style={{ color: 'rgb(104, 104, 104)' }}>
+          </button>
+          </li>
+
+          <li>
+          <button onClick={() => scrollToSection(downloadRef)} style={{ color: 'rgb(255, 255, 255)' }}>
             다운로드
-          </a>
-        </li>
+          </button>
+          </li>
+
           </ul>
         </GnbLayout>
       );
@@ -58,12 +57,22 @@ interface GnbProps {
 export default Gnb;
 
 const GnbLayout = styled.nav`
-  ul {
+  bottom: 3rem;
+  left: 2.5rem;
+  /* background-color: #706f6f; */
+    height: 16rem;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+
+  > ul {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;
-    li {
+    gap: 2rem;
+    flex-direction: column;
+
+    > li {
       margin-right: 20px;
       cursor: pointer;
     }
