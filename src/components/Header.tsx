@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     <HeaderLayout>
         <HeaderContainer>
           <div>
-            <Link href='/'>
+            <Link href='/home'>
               <Image src={witdogLogoWhite} alt='witdog-logo-white' />
             </Link>
           </div>
@@ -49,8 +49,9 @@ display: flex;
 flex-direction: row;
 position: fixed;
 top: 0;
+z-index: 1;
   /* width: 100% */
-  left: 0;
+left: 0;
 right: 0;
 `
 
