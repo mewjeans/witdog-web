@@ -27,25 +27,25 @@ interface GnbProps {
         <ul>
           <li>
           <button onClick={() => scrollToSection(servicesRef)} style={{ color: 'rgb(255, 255, 255)' }}>
-            서비스 소개
+            service
           </button>
           </li>
 
           <li>
           <button onClick={() => scrollToSection(companyRef)} style={{ color: 'rgb(241, 238, 238)' }}>
-            회사 소개
+            about us
           </button>
           </li>
 
           <li>
           <button onClick={() => scrollToSection(demoRef)} style={{ color: 'rgb(236, 232, 232)' }}>
-            데모
+            demo
           </button>
           </li>
 
           <li>
           <button onClick={() => scrollToSection(downloadRef)} style={{ color: 'rgb(255, 255, 255)' }}>
-            다운로드
+            download
           </button>
           </li>
 
@@ -57,8 +57,8 @@ interface GnbProps {
 export default Gnb;
 
 const GnbLayout = styled.nav`
-  bottom: 3rem;
-  left: 2.5rem;
+  bottom: 4rem;
+  left: 4rem;
   /* background-color: #706f6f; */
     height: 16rem;
     display: flex;
