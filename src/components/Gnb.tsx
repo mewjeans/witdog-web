@@ -58,8 +58,7 @@ export default Gnb;
 
 const GnbLayout = styled.nav`
   bottom: 4rem;
-  left: 4rem;
-  /* background-color: #706f6f; */
+  left: 5rem;
     height: 16rem;
     display: flex;
     position: fixed;
@@ -69,12 +68,13 @@ const GnbLayout = styled.nav`
     list-style: none;
     display: flex;
     padding: 0;
-    gap: 2rem;
+    gap: 2.4rem;
     flex-direction: column;
 
     > li {
-      margin-right: 20px;
+      margin-right: 2rem;
       cursor: pointer;
+      font-size: 1.8rem;
     }
   }
 `;
