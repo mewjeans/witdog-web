@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <GlobalStyle />
       <Header />
       {getLayout(<Component {...pageProps} />)}
-      {/* <Footer /> */}
+
     </>
   );
 }
