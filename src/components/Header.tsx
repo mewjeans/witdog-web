@@ -58,7 +58,7 @@ right: 0;
 const HeaderContainer = styled.header`
 background-color: #000000;
 color: white;
-gap: 36rem;
+gap: 100rem;
 display: flex;
 
 
