@@ -9,6 +9,7 @@ import CompanyIntroSection from '../../sections/CompanySection';
 import DownloadIntroSection from '../../sections/DownloadSection';
 import DemoIntroSection from '../../sections/DemoSection';
 import Circle from '@/components/Circle';
+import Footer from '@/components/Footer';
 
 export const HomePage = () => {
   const servicesRef = useRef(null);
@@ -31,8 +32,14 @@ export const HomePage = () => {
     };
   }, []);
 
-   // 투명도 계산
-  const opacity = Math.min(1 - scrollPosition / 1200, 1);
+
+  // Demo 섹션의 배경 색상 변경 (점점 초록색으로)
+
+
+  //  투명도 계산
+  const opacity1 = Math.min(1 - scrollPosition / 1200, 1);
+  const bgColor1 = scrollPosition < 1200 ? '#fff' : '#000'; // 흰색에서 검은색으로 변하는 지점
+
 
   return (
     
@@ -43,15 +50,13 @@ export const HomePage = () => {
         demoRef={demoRef}
         downloadRef={downloadRef}
       />
-      
-      <ServiceSection servicesRef={servicesRef} />
-
+     <ServiceSection servicesRef={servicesRef} />
       <CompanyIntroSection companyRef={companyRef} />
-      <Background style={{ opacity }} />
+      <Background style={{ opacity: opacity1 }} />
       <DemoIntroSection demoRef={demoRef} />
-
+      {/* <Background style={{ background: bgColor2 }} /> */}
       <DownloadIntroSection downloadRef={downloadRef} />
-
+      <Footer />
     </div>
   );
 };
