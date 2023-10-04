@@ -1,51 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
-const appearAndDisappear = keyframes`
+interface GreenCircleProps {
+  '--scrollPosition'?: string;
+}
+
+const moveAnimation = keyframes`
   0% {
-    top: -150px;
-    opacity: 0;
-  }
-  50% {
     opacity: 1;
+    top: -300px;
   }
   100% {
-    top: calc(50vh + 150px);
     opacity: 0;
+    top: 55vh;
   }
 `;
 
 const GraphicWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  position: relative; */
+  position: fixed;
+  top: -300px;
+  left: inherit;
+  right: calc(95px + 10vw);
+
+  width: 150px;
+  height: 150px;
+  filter: blur(0px);
+  /* background: radial-gradient(circle 210px at 65% 40%, #10782e, #5eff8b, #9affb7); */
+  animation: ${moveAnimation} 10s linear infinite;
 `;
 
+
 const GreenCircle = styled.div`
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  z-index: 1;
+  /* /* position: absolute;
+  width: 30rem;
+  height: 30rem;
+  z-index: 0;
   filter: blur(0px);
   border-radius: 50%;
   left: calc(50% - 150px);
   background: radial-gradient(circle 420px at 65% 40%, #10782e, #5eff8b, #9affb7);
-  animation: ${appearAndDisappear} 5s linear infinite;
+ 
+  animation-play-state: paused;
+  animation-delay: calc(var(--scrollPosition) * -0.1s);
+  animation-fill-mode: both;/*  */
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  z-index: 0;
+  top: -30rem;
+  filter: blur(0px);
+  border-radius: 50%;
+  left: calc(50% + 350px - 150px);
+  background: radial-gradient(circle 420px at 65% 40%, #10782e, #5eff8b, #9affb7);
+  animation: ${moveAnimation} 10s linear infinite;
 `;
+
 
 const Circle = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     const currentPosition = window.scrollY;
-    setScrollPosition(currentPosition);
+    setScrollPosition(currentPosition) // Adjust for initial position
   };
 
+
   useEffect(() => {
-    // Check if window is defined (client-side)
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', handleScroll);
       return () => {
@@ -54,15 +80,12 @@ const Circle = () => {
     }
   }, []);
 
-  // Calculate the top position of the GreenCircle based on scroll position
-  const initialPosition = -150; // Initial top position of the GreenCircle
-  const maxPosition = typeof window !== 'undefined' ? window.innerHeight - 150 : 0; // Maximum top position to stay within the viewport
-  const topPosition = Math.min(initialPosition + scrollPosition, maxPosition);
-
+ 
   return (
-    <GraphicWrapper>
-      <GreenCircle style={{ top: `${topPosition}px` }} />
-    </GraphicWrapper>
+    <>
+ 
+    <GreenCircle style={{ animationDelay: `${scrollPosition * -0.01}s` }} />
+  </>
   );
 };
 
