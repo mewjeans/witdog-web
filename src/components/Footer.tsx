@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
                     <p>개인정보처리방침</p>
                 </div>
                 <div>
-                    <p>(주)세연시스템즈 | 서울 구로시 마리오 타워 -- | 통신판매 번호 : 000000</p>
-                    <p>사업자 등록 번호 : 00000 | 연락처 : 02-1234-5678</p>
-                    <p>대표 이사 : 홍길동</p>
-                    <p>COPYRIGHTS (C)</p>
+                    <p>(주)세연시스템즈 | 경기도 광명시 소하로 190, B동 1316호 </p>
+                    <p>사업자 등록 번호 : 440-81-02374 | 연락처 : 02-6274-2220</p>
+                    <p>대표 이사 : 최석문</p>
+                    <p>COPYRIGHTS ⓒ Seyon Systems Co., Ltd. All rights reserved.</p>
                 </div>
             </div>
         </FooterContainer>
@@ -35,10 +35,11 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const FooterLayout = styled.header`
-/* background-color: #c42828; */
-height: 10rem;
-color: white;
-
+/* position: absolute; */
+bottom: 0;
+width: 100%;
+background-color: #5E5E5E;
+color: #A49D9D;
 `
 
 const FooterContainer= styled.footer`
@@ -48,7 +49,7 @@ padding: 2rem 0;
 
     > div {
         background: #5E5E5E;
-        width: 120rem;
+        width: 160rem;
         height: 24rem;
         display: flex;
         gap: 2rem;
@@ -69,19 +70,16 @@ padding: 2rem 0;
             > p {
                 ${Fonts.medium16};
                 line-height: 1.9rem; 
-            }
-            
-            
+            }     
         }
 
         > div:nth-child(3) {
             display: flex;
             gap: 1rem;
             flex-direction: column;
-            
 
             > p {
-                ${Fonts.medium12};
+                ${Fonts.medium14};
             }
         }
     }
