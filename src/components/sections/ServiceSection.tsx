@@ -41,7 +41,7 @@ const StyledServicesSection = styled.div`
 `;
 
 const ServicesHeading = styled.h2`
-  font-size: 10rem;
+  font-size: 12rem;
   font-weight: 600;
   color: #fff;
   z-index: 0;

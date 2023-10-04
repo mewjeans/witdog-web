@@ -14,9 +14,19 @@ interface DemoSectionProps {
   };
 
 const DemoIntro = styled.div`
-  background-color: #141820;
+  background-color: #8d8d8d;
   height: 116rem;
 
+  > p {
+    width: 50rem;
+    top: 34rem;
+    left: 25rem;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 1.4;
+    position: relative;
+  }
 `;
+
 
 export default DemoIntroSection;
