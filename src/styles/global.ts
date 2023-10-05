@@ -1,7 +1,6 @@
 import { css, createGlobalStyle } from 'styled-components';
 import { ResetCSS } from './reset';
 
-
 export const GlobalStyle = createGlobalStyle`
   ${ResetCSS}
 

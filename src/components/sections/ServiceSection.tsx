@@ -3,9 +3,9 @@ import styled, { css, keyframes } from 'styled-components';
 
 interface ServiceSectionProps {
   servicesRef: React.RefObject<HTMLDivElement>;
-  }
-  
-  const flipIn = keyframes`
+}
+
+const flipIn = keyframes`
   from {
     transform: rotateX(180deg);
     opacity: 0;
@@ -38,6 +38,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ servicesRef }) => {
 const StyledServicesSection = styled.div`
   /* background-color: #000000; */
   height: 116rem;
+  width: 100%;
 `;
 
 const ServicesHeading = styled.h2`
@@ -48,11 +49,12 @@ const ServicesHeading = styled.h2`
   position: absolute;
   top: 32%;
   left: 20%;
+  width: 80rem;
   transform: translateY(-50%);
   perspective: 120rem;
   display: flex;
   flex-direction: column;
-
+  width: 120rem;
   transform: rotateX(80deg);
   animation: ${flipIn} 1.1s ease-in-out forwards;
   opacity: 1;

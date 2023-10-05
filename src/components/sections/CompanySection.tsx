@@ -10,8 +10,8 @@ interface CompanySectionProps {
     return (
       <StyledCompanySection ref={ companyRefProp }>
          <HeaderText>Smart Pet Care<br />Solution</HeaderText>
-          <p>회사 소개 세연시스템즈는 지속 가능한 비즈니스를 추구합니다. 더욱 스마트한 서비스 모델을 연구 개발하여 고객의 상상을 실현하고 있습니다.
-          
+          <p>회사 소개 세연시스템즈는 지속 가능한 비즈니스를 추구합니다.
+            더욱 스마트한 서비스 모델을 연구 개발하여 고객의 상상을 실현하고 있습니다.
           </p>
         <Circle />
       </StyledCompanySection>
