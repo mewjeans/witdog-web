@@ -16,6 +16,7 @@ export const HomePage = () => {
   const companyRef = useRef(null);
   const demoRef = useRef(null);
   const downloadRef = useRef(null);
+  const introRef = useRef(null);
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [bgColor, setBgColor] = useState('#000');
@@ -32,39 +33,32 @@ export const HomePage = () => {
     };
   }, []);
 
-
-  // Demo 섹션의 배경 색상 변경 (점점 초록색으로)
-
-
   //  투명도 계산
   const opacity1 = Math.min(1 - scrollPosition / 1200, 1);
   const bgColor1 = scrollPosition < 1200 ? '#fff' : '#000'; // 흰색에서 검은색으로 변하는 지점
 
-
   return (
-    
-    <div>
+    <HomepageContainer>
       <Gnb
         servicesRef={servicesRef}
         companyRef={companyRef}
         demoRef={demoRef}
         downloadRef={downloadRef}
       />
-     <ServiceSection servicesRef={servicesRef} />
+      <ServiceSection servicesRef={servicesRef} />
       <CompanyIntroSection companyRef={companyRef} />
       <Background style={{ opacity: opacity1 }} />
       <DemoIntroSection demoRef={demoRef} />
       {/* <Background style={{ background: bgColor2 }} /> */}
       <DownloadIntroSection downloadRef={downloadRef} />
       <Footer />
-    </div>
+    </HomepageContainer>
   );
 };
 
-
-const Section = styled.div`
-  /* padding: 20px; */
- 
+const HomepageContainer = styled.div`
+  width: 100%;
+  
 `;
 
 const Background = styled.div`
@@ -77,4 +71,3 @@ const Background = styled.div`
   z-index: -1;
   transition: opacity 0.3s ease; /* 투명도 전환 애니메이션 설정 */
 `;
-
