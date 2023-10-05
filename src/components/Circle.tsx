@@ -35,7 +35,6 @@ const GraphicWrapper = styled.div`
   animation: ${moveAnimation} 10s linear infinite;
 `;
 
-
 const GreenCircle = styled.div`
   /* /* position: absolute;
   width: 30rem;
@@ -61,15 +60,13 @@ const GreenCircle = styled.div`
   animation: ${moveAnimation} 10s linear infinite;
 `;
 
-
 const Circle = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     const currentPosition = window.scrollY;
-    setScrollPosition(currentPosition) // Adjust for initial position
+    setScrollPosition(currentPosition); // Adjust for initial position
   };
-
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -80,12 +77,10 @@ const Circle = () => {
     }
   }, []);
 
- 
   return (
     <>
- 
-    <GreenCircle style={{ animationDelay: `${scrollPosition * -0.01}s` }} />
-  </>
+      <GreenCircle style={{ animationDelay: `${scrollPosition * -0.01}s` }} />
+    </>
   );
 };
 

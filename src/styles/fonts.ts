@@ -39,4 +39,6 @@ export const Fonts = {
     bold34: 'font-size:3.4rem; font-weight:700;',
     bold35: 'font-size:3.5rem; font-weight:700;',
     bold40: 'font-size:4rem; font-weight:700;',
+    bold44: 'font-size:4.4rem; font-weight:700;',
+    bold50: 'font-size:5rem; font-weight:700;',
   } as const;
