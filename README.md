@@ -14,7 +14,6 @@
 ```
 $ git clone https://github.com/mewjeans/witdog-web.git
 $ cd witdog-web
-
 ```
 #### 2. Run
 ```
@@ -36,22 +35,34 @@ $ npm run dev
 📦  WITDOG
 ├─ node_modules
 ├─ public
-│  └─ assets
+│  ├─ assets
+│  └─ svgs
 ├─ src
 │  ├─ components
-│  │  ├─ layout
-│  │  │  └─ DefaultLayout.tsx
+│  │  ├─ layouts
+│  │  │  ├─ DefaultLayout.tsx
+│  │  │  └─ index.ts 
 │  │  ├─ pages
 │  │  │  ├─ company
-│  │  │  │  └─ CompanyPage.tsx
+│  │  │  │  ├─ CompanyPage.tsx
+│  │  │  │  └─ index.ts 
 │  │  │  ├─ demo
-│  │  │  │  └─ DemoPage.tsx
+│  │  │  │  ├─ DemoPage.tsx
+│  │  │  │  └─ index.ts 
 │  │  │  ├─ download
-│  │  │  │  └─ DownloadPage.tsx
+│  │  │  │  ├─ DownloadPage.tsx
+│  │  │  │  └─ index.ts 
 │  │  │  ├─ home
-│  │  │  │  └─ HomePage.tsx
+│  │  │  │  ├─ HomePage.tsx
+│  │  │  │  └─ index.ts 
 │  │  │  ├─ intro
-│  │  │  │  └─ IntroPage.tsx
+│  │  │  │  ├─ IntroPage.tsx
+│  │  │  │  └─ index.ts 
+│  │  ├─ sections
+│  │  │  ├─ CompanySection.tsx
+│  │  │  ├─ DemoSection.tsx
+│  │  │  ├─ DownloadSection.tsx
+│  │  │  └─ ServiceSection.tsx
 │  │  └─ seo
 │  │     ├─ CostomHead.tsx
 │  │     └─ index.ts

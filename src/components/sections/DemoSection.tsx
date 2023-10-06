@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { Fonts } from '@/styles';
 import Image from 'next/image';
 import demoimage from '../../../public/assets/witdog-demo-login.png';
@@ -8,12 +8,21 @@ interface DemoSectionProps {
   demoRef: React.MutableRefObject<null>;
 }
 
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(20deg) rotateX(-20deg);
+  }
+`;
+
 const DemoIntroSection: React.FC<DemoSectionProps> = ({ demoRef }) => {
   return (
     <DemoIntro ref={demoRef}>
       <DemoContainer>
         <p>Demo</p>
-        <Image src={demoimage} alt='Demo Image' width={400} height={600} />
+        <RotatingImage src={demoimage} alt='Demo Image' width={400} height={600} />
       </DemoContainer>
     </DemoIntro>
   );
@@ -41,5 +50,11 @@ const DemoContainer = styled.div`
     ${Fonts.bold50};
   }
 `;
+
+const RotatingImage = styled(Image)`
+animation: ${rotateAnimation} 6s linear;
+transform-origin: 50% 50%;
+`;
+
 
 export default DemoIntroSection;

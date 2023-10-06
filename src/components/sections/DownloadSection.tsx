@@ -20,9 +20,11 @@ const DownloadIntroSection: React.FC<DownloadSectionProps> = ({ downloadRef }) =
             정확히 소통하는 실시간 채팅 서비스 윗독
             <br /> 지금 바로 윗독하세요!
           </p>
+          <a href='https://play.google.com/store/apps' target='_blank' rel='noopener noreferrer'>
           <button>
             <p>다운로드 버튼</p>
           </button>
+          </a>
         </div>
 
         <Image src={DownloadImg} alt='downloadImage' width={600} />
@@ -42,7 +44,7 @@ const DownloadIntro = styled.div`
 const DownloadContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 120rem;
+  /* width: 120rem; */
   margin-top: 20rem;
 
   > div {
@@ -62,7 +64,8 @@ const DownloadContainer = styled.div`
       line-height: 5rem;
     }
 
-    > button {
+    > a {    
+      button {
       background-color: #88fd92;
       border-radius: 3rem;
       width: 16rem;
@@ -73,7 +76,8 @@ const DownloadContainer = styled.div`
       > p {
         display: flex;
       }
-    }
+    }}
+
   }
 
   > img {

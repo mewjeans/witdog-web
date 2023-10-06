@@ -45,10 +45,12 @@ const HeaderLayout = styled.header`
 `;
 
 const HeaderContainer = styled.header`
-  background-color: #000000;
-  color: white;
-  gap: 100rem;
-  display: flex;
+    background-color: #000000;
+    color: white;
+    /* gap: 100rem; */
+    justify-content: space-between;
+    width: 92%;
+    display: flex;
 
 
   > div:first-child {

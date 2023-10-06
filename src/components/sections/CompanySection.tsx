@@ -42,7 +42,7 @@ const HeaderText = styled.h2`
     font-size: 6rem;
     padding-bottom: 3vw;
   }
-
+  width: 100rem;
   color: #222;
   position: relative;
   font-weight: 100;
