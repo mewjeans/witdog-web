@@ -38,6 +38,7 @@ export const HomePage = () => {
   const bgColor1 = scrollPosition < 1200 ? '#fff' : '#000'; // 흰색에서 검은색으로 변하는 지점
 
   return (
+    <HomepageLayout>
     <HomepageContainer>
       <Gnb
         servicesRef={servicesRef}
@@ -53,12 +54,17 @@ export const HomePage = () => {
       <DownloadIntroSection downloadRef={downloadRef} />
       <Footer />
     </HomepageContainer>
+    </HomepageLayout>
   );
 };
 
-const HomepageContainer = styled.div`
+const HomepageLayout = styled.div`
   width: 100%;
-  
+  display: flex;
+`;
+
+const HomepageContainer = styled.div`
+ width: 100%;
 `;
 
 const Background = styled.div`
