@@ -94,7 +94,7 @@ const HamburgerButton = styled.div<BurgerButtonProps>`
   }
 
   @media (max-width: 768px) {
-    display: block; /* 화면이 작을 때 보이게 합니다. */
+    display: block;
   }
 `;
 
