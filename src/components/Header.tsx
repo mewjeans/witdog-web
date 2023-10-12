@@ -7,9 +7,34 @@ import witdogLogoWhite from '../../public/assets/witdog-logo-white.png';
 import witdogLogo from '../../public/assets/witdog-logo.png';
 import { Fonts } from '@/styles';
 
+
+interface BurgerButtonProps {
+  isMenuOpen: boolean;
+}
+
 const Header: React.FC = () => {
+  const [isMenuOpen, SetIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    SetIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    SetIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    closeMenu();
+  }, []);
+
+
   return (
     <HeaderLayout>
+      <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </HamburgerButton>
       <HeaderContainer>
         <div>
           <Link href='/home'>
@@ -42,6 +67,35 @@ const HeaderLayout = styled.header`
   width: 100%;
   left: 0;
   right: 0;
+`;
+
+const HamburgerButton = styled.div<BurgerButtonProps>`
+  display: none;
+  cursor: pointer;
+
+  > div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:first-child {
+      transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-45deg) translate(-5px, 6px)' : 'none')};
+    }
+
+    &:nth-child(2) {
+      opacity: ${({ isMenuOpen }) => (isMenuOpen ? '0' : '1')};
+    }
+
+    &:last-child {
+      transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(45deg) translate(-5px, -6px)' : 'none')};
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const HeaderContainer = styled.header`

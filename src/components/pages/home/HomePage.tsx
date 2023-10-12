@@ -35,7 +35,7 @@ export const HomePage = () => {
 
   //  투명도 계산
   const opacity1 = Math.min(1 - scrollPosition / 1200, 1);
-  const bgColor1 = scrollPosition < 1200 ? '#fff' : '#000'; // 흰색에서 검은색으로 변하는 지점
+
 
   return (
     <HomepageLayout>
