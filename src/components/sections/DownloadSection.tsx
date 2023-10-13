@@ -21,9 +21,9 @@ const DownloadIntroSection: React.FC<DownloadSectionProps> = ({ downloadRef }) =
             <br /> 지금 바로 윗독하세요!
           </p>
           <a href='https://play.google.com/store/apps' target='_blank' rel='noopener noreferrer'>
-          <button>
-            <p>다운로드 버튼</p>
-          </button>
+            <button>
+              <p>다운로드 버튼</p>
+            </button>
           </a>
         </div>
 
@@ -64,20 +64,20 @@ const DownloadContainer = styled.div`
       line-height: 5rem;
     }
 
-    > a {    
+    > a {
       button {
-      background-color: #88fd92;
-      border-radius: 3rem;
-      width: 16rem;
-      height: 5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      > p {
+        background-color: #88fd92;
+        border-radius: 3rem;
+        width: 16rem;
+        height: 5rem;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        > p {
+          display: flex;
+        }
       }
-    }}
-
+    }
   }
 
   > img {
