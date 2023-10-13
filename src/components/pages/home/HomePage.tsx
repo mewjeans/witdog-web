@@ -36,24 +36,23 @@ export const HomePage = () => {
   //  투명도 계산
   const opacity1 = Math.min(1 - scrollPosition / 1200, 1);
 
-
   return (
     <HomepageLayout>
-    <HomepageContainer>
-      <Gnb
-        servicesRef={servicesRef}
-        companyRef={companyRef}
-        demoRef={demoRef}
-        downloadRef={downloadRef}
-      />
-      <ServiceSection servicesRef={servicesRef} />
-      <CompanyIntroSection companyRef={companyRef} />
-      <Background style={{ opacity: opacity1 }} />
-      <DemoIntroSection demoRef={demoRef} />
-      {/* <Background style={{ background: bgColor2 }} /> */}
-      <DownloadIntroSection downloadRef={downloadRef} />
-      <Footer />
-    </HomepageContainer>
+      <HomepageContainer>
+        <Gnb
+          servicesRef={servicesRef}
+          companyRef={companyRef}
+          demoRef={demoRef}
+          downloadRef={downloadRef}
+        />
+        <ServiceSection servicesRef={servicesRef} />
+        <CompanyIntroSection companyRef={companyRef} />
+        <Background style={{ opacity: opacity1 }} />
+        <DemoIntroSection demoRef={demoRef} />
+        {/* <Background style={{ background: bgColor2 }} /> */}
+        <DownloadIntroSection downloadRef={downloadRef} />
+        <Footer />
+      </HomepageContainer>
     </HomepageLayout>
   );
 };
@@ -64,7 +63,7 @@ const HomepageLayout = styled.div`
 `;
 
 const HomepageContainer = styled.div`
- width: 100%;
+  width: 100%;
 `;
 
 const Background = styled.div`
