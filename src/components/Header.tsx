@@ -30,11 +30,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderLayout>
-      <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </HamburgerButton>
+
       <HeaderContainer>
         <div>
           <Link href='/home'>
@@ -49,6 +45,14 @@ const Header: React.FC = () => {
           <Link href='/download'>앱 다운로드</Link>
         </div>
       </HeaderContainer>
+      <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+        {/* <div>메뉴 1</div>
+        <div>메뉴 2</div>
+        <div>메뉴 3</div> */}
+      </HamburgerButton>
     </HeaderLayout>
   );
 };
@@ -65,6 +69,7 @@ const HeaderLayout = styled.header`
   top: 0;
   z-index: 1;
   width: 100%;
+  align-items: center;
   left: 0;
   right: 0;
 `;
@@ -93,8 +98,9 @@ const HamburgerButton = styled.div<BurgerButtonProps>`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: block;
+
   }
 `;
 
@@ -106,13 +112,12 @@ const HeaderContainer = styled.header`
     width: 92%;
     display: flex;
 
-
   > div:first-child {
     width: 24rem;
     position: relative;
     > a {
       > img {
-        margin: 4rem;
+//      margin: 4rem;
         width: 16rem;
         height: auto;
         position: absolute;
