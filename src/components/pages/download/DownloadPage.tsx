@@ -33,7 +33,7 @@ const DownloadLayout = styled.div`
   width: 100%;
   height: 105rem;
   display: flex;
-  /* background-color: #000000; */
+  background-color: #000000;
   justify-content: center;
   top: 11rem;
   position: fixed;
@@ -64,7 +64,7 @@ const DownloadContainer = styled.div`
 
     > a {
       button {
-        background-color: #88fd92;
+        background-color: #a4daac;
         border-radius: 3rem;
         width: 16rem;
         height: 5rem;

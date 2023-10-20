@@ -2,7 +2,9 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import earth from '../../../../public/assets/earth.mp4';
 import { Fonts } from '@/styles';
+import IntroImage from '../../../../public/assets/intro.png';
 import Image from 'next/image';
+import demo from '../../../../public/assets/demo-video.mp4';
 import SeyonLogo from '../../../../public/assets/seyon-logo-transparent.png';
 
 export const IntroPage: React.FC = () => {
@@ -13,22 +15,16 @@ export const IntroPage: React.FC = () => {
 
         <IntroTitle>
           <div>
-            <p>Best Partner For Connecting the World</p>
+            <p>Our Solution</p>
           </div>
 
-          <div>
-            <Image src={SeyonLogo} alt='seyon-logo' />
-            <p>세계를 연결하는 세연</p>
-          </div>
+
+            <Image src={IntroImage} alt='intro-img' />
+           
+
         </IntroTitle>
 
-        <VideoContainer>
-          <video autoPlay controls>
-            <source src='/assets/earth-black.mp4' type='video/mp4' />
-          </video>
-        </VideoContainer>
-
-        <IntroContent>
+        {/* <IntroContent>
           <div>
             <p>ICT 사업</p>
             <p>대한민국의 우수한 ICT 산업을 글로벌 시장에 판매하고 있습니다</p>
@@ -43,7 +39,7 @@ export const IntroPage: React.FC = () => {
             <p>해외 사업</p>
             <p>AI를 기반으로 하는 스마트 스포츠 기기를 독자 연구 개발하고 있습니다</p>
           </div>
-        </IntroContent>
+        </IntroContent> */}
       </IntroContainer>
     </IntroLayout>
   );
@@ -51,21 +47,22 @@ export const IntroPage: React.FC = () => {
 
 const IntroLayout = styled.div`
   width: 100%;
-  height: 105rem;
+  height: 435rem;
   display: flex;
-  /* background-color: #000000; */
+  background-color: #000000;
   justify-content: center;
   top: 11rem;
-  position: fixed;
+  
 `;
 
 const IntroContainer = styled.div`
   width: 120rem;
-  height: 105rem;
+  height: 100rem;
   background-color: #000000;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  /* overflow-y: auto; */
 `;
 
 const IntroTitle = styled.div`
@@ -73,7 +70,7 @@ const IntroTitle = styled.div`
     margin-top: 4rem;
     color: #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content:  flex-start;
     gap: 2rem;
 
     > p {

@@ -121,6 +121,8 @@ const HeaderContainer = styled.header`
         width: 16rem;
         height: auto;
         position: absolute;
+        display: flex;
+        margin-left: 5rem;
       }
     }
   }
