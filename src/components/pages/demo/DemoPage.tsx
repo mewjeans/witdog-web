@@ -7,26 +7,6 @@ import demo from '../../../../public/assets/demo-video.mp4';
 import SeyonLogo from '../../../../public/assets/seyon-logo-transparent.png';
 
 
-// const DemoLayout = styled.div`
-//     width: 100%;
-//     height: 105rem;
-//     display: flex;
-//     /* background-color: #000000; */
-//     justify-content: center;
-//     top: 11rem;
-//     position: fixed;
-// `
-
-// const DemoContainer = styled.div`
-//     width: 120rem;
-//     height: 105rem;
-//     background-color: #3f3f3f;
-
-//     > div {
-//         color: #FFFFFF;
-//     }
-// `
-
 
 export const DemoPage: React.FC = () => {
   return (
@@ -39,10 +19,6 @@ export const DemoPage: React.FC = () => {
             <p>Demo Video</p>
           </div>
 
-          {/* <div>
-            <Image src={SeyonLogo} alt='seyon-logo' />
-            <p>세계를 연결하는 세연</p>
-          </div> */}
         </IntroTitle>
 
         <VideoContainer>
@@ -131,11 +107,9 @@ const VideoContainer = styled.div`
     height: 60rem;
     display: flex; */
     width: 100rem;
-    /* height: 64rem; */
     display: flex;
     border-radius: 1rem;
   }
-    
   }
 
 `;

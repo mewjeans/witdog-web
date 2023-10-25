@@ -49,9 +49,6 @@ const Header: React.FC = () => {
         <div></div>
         <div></div>
         <div></div>
-        {/* <div>메뉴 1</div>
-        <div>메뉴 2</div>
-        <div>메뉴 3</div> */}
       </HamburgerButton>
     </HeaderLayout>
   );
