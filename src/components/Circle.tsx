@@ -27,7 +27,6 @@ const GraphicWrapper = styled.div`
   top: -300px;
   left: inherit;
   right: calc(95px + 10vw);
-
   width: 150px;
   height: 150px;
   filter: blur(0px);
@@ -44,7 +43,6 @@ const GreenCircle = styled.div`
   border-radius: 50%;
   left: calc(50% - 150px);
   background: radial-gradient(circle 420px at 65% 40%, #10782e, #5eff8b, #9affb7);
- 
   animation-play-state: paused;
   animation-delay: calc(var(--scrollPosition) * -0.1s);
   animation-fill-mode: both;/*  */

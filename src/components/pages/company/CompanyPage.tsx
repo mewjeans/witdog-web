@@ -156,33 +156,3 @@ const Wave = styled.div`
   background: url(public/svgs/wave.svg) repeat-x;
   animation: ${waveAnimation} 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 `;
-
-// export const CompanyPage = () => {
-//   return (
-//     <CompanyLayout>
-//       <CompanyContainer>
-//         <div>CompanyPage</div>
-//       </CompanyContainer>
-//     </CompanyLayout>
-//   );
-// };
-
-// const CompanyLayout = styled.div`
-//   width: 100%;
-//   height: 105rem;
-//   display: flex;
-//   /* background-color: #000000; */
-//   justify-content: center;
-//   top: 11rem;
-//   position: fixed;
-// `;
-
-// const CompanyContainer = styled.div`
-//   width: 120rem;
-//   height: 105rem;
-//   background-color: #3f3f3f;
-
-//   > div {
-//     color: #ffffff;
-//   }
-// `;

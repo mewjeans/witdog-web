@@ -24,22 +24,6 @@ export const IntroPage: React.FC = () => {
 
         </IntroTitle>
 
-        {/* <IntroContent>
-          <div>
-            <p>ICT 사업</p>
-            <p>대한민국의 우수한 ICT 산업을 글로벌 시장에 판매하고 있습니다</p>
-          </div>
-
-          <div>
-            <p>기술 혁신</p>
-            <p>AI를 기반으로 하는 스마트 스포츠 기기를 독자 연구 개발하고 있습니다</p>
-          </div>
-
-          <div>
-            <p>해외 사업</p>
-            <p>AI를 기반으로 하는 스마트 스포츠 기기를 독자 연구 개발하고 있습니다</p>
-          </div>
-        </IntroContent> */}
       </IntroContainer>
     </IntroLayout>
   );
@@ -52,7 +36,7 @@ const IntroLayout = styled.div`
   background-color: #000000;
   justify-content: center;
   top: 11rem;
-  
+  position: absolute;
 `;
 
 const IntroContainer = styled.div`

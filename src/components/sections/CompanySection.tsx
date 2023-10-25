@@ -20,7 +20,6 @@ interface CompanySectionProps {
   };
 
 const StyledCompanySection = styled.div`
-  /* background-color: #525252; */
   height: 116rem;
 
   > p {
